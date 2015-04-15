@@ -8,5 +8,6 @@ app.set('port', process.env.PORT || 20003);
 
 var server = app.listen(app.get('port'), function() {
   redis_pools.configure(redis_json);
+  console.log("server starting...")
   debug('Express server listening on port ' + server.address().port);
 });
